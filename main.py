@@ -262,7 +262,7 @@ def extract_events_with_gemini(genai_client, descriptions_batch, batch_index, re
         update_log_display(error_msg, level="CRITICAL")
         return [{"eventos_detectados": []} for _ in range(len(descriptions_batch))]
 
-    model_name = "gemini-1.5-flash-latest" 
+    model_name = "gemini-2.5-flash-preview-04-17" 
     try:
         model = genai_client.GenerativeModel(model_name)
         update_log_display(f"[Lote {batch_index + 1}] Gemini model '{model_name}' initialized.", level="DEBUG")
